@@ -61,8 +61,8 @@ Built-in laptop mic works fine.
 
 ### Step 1 — Clone the repository
 ```bash
-git clone https://github.com/nilkamalgiri22-lab/Python-tutorials-and-problems.git
-cd "mega project 1 - Jarvis"
+git clone https://github.com/nilkamalgiri22-lab/Nova-voice-assistant.git
+cd Nova-voice-assistant
 ```
 
 ### Step 2 — Create virtual environment
