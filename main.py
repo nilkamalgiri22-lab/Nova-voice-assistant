@@ -19,7 +19,7 @@ recognizer = sr.Recognizer()
     # engine.runAndWait()
 
 
-def speak(text, speed=1.5):   # 1.2 = Alexa-like speed, tune this!
+def speak(text, speed=1.2):   # 1.2 = Alexa-like speed, tune this!
     tts = gTTS(text=text, lang="en", slow=False)
     tts.save("response.mp3")
     

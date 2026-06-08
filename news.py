@@ -11,7 +11,7 @@ def fetchNews():
     try:
         response = requests.get(url)
         data = response.json()
-        # print("API raw response:", response.json())
+        #print("API raw response:", response.json())
         
         if "articles" in data:
             articles = data["articles"]
