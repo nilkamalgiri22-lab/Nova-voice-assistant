@@ -2,7 +2,7 @@
 
 A Python-based voice assistant that listens for your voice, responds intelligently using Google Gemini AI, reads the news, plays music, and speaks back in a natural voice.
 
-Built by **Nilkamal Giri** | Inspired by Code with Harry
+Built by **Nilkamal Giri** | 
 
 ---
 
@@ -107,7 +107,7 @@ python main.py
 | `"open google"` | Opens Google in browser |
 | `"open youtube"` | Opens YouTube in browser |
 | `"open instagram"` | Opens Instagram in browser |
-| `"play set"` | Plays music from your library |
+| `"play set"` | Plays 'set in fire to the rain' music in yt from your library |
 | `"tell news"` | Reads top 5 India headlines |
 | anything else | Answered by Gemini AI |
 
@@ -136,7 +136,39 @@ python main.py
 
 ---
 
+## 🎵 Adding New Songs
+
+Open `musiclibrary.py` and add your song in this format:
+
+```python
+music = {
+    "set": "https://www.youtube.com/watch?v=a2giXO6eyuI",
+    "rolling": "https://www.youtube.com/watch?v=rYEDA3JcQqw",
+    "mind": "https://www.youtube.com/watch?v=VJxppgsHjF8",
+    "your_song_name": "https://www.youtube.com/watch?v=XXXXXXX",  # add here
+}
+```
+
+Then just say **"Nova, play your_song_name"** to play it.
+
+> The keyword must be a **single word** (e.g. "play believer", not "play believer by imagine dragons")
+
+---
+
+## 🌐 Adding New Websites
+
+Open `main.py` and find the `process_command()` function. Add a new `elif` block like this:
+
+```python
+elif "open netflix" in c.lower():
+    speak("Opening Netflix")
+    webbrowser.open("https://www.netflix.com")
+```
+
+You can add as many websites as you want following the same pattern.
+
+
 ## 🔒 Security
 
 Never share your `.env` file. It contains your private API keys.
-The `.gitignore` file ensures `.env` is never uploaded to GitHub.
+
